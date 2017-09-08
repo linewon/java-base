@@ -15,11 +15,20 @@ public class JSONArrayDemo {
 		
 		List<Student> stuList = new ArrayList<Student>();
 		stuList.add(stu);
+		stu.setAge(18);
+		stu.setName("y");
+		stuList.add(stu);
+		// 由于list里存的是引用，对stu的set操作也会影响到list里的stu。
+		System.out.println(stuList.toString());
 		
+		// list -> jsonArray
 		JSONArray jsonArr1 = (JSONArray) JSON.toJSON(stuList);
+		// jsonArray -> jsonString
 		System.out.println(jsonArr1.toJSONString());
-		
-		List<Student> listFromJson = jsonArr1.toJavaList(Student.class);
+		// jsonString -> jsonArray
+		JSONArray jsonArray = JSON.parseArray(jsonArr1.toJSONString()); 
+		// jsonArrray -> list
+		List<Student> listFromJson = jsonArray.toJavaList(Student.class);
 		System.out.println(listFromJson);
 	}
 

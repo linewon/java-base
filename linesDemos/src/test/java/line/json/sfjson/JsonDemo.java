@@ -17,7 +17,7 @@ public class JsonDemo {
 		JSONObject json = JSONObject.fromObject(stu);
 		System.out.println(json.toString());
 		
-		Student stuFromJson = (Student) json.toBean(json, Student.class);
+		Student stuFromJson = (Student) JSONObject.toBean(json, Student.class);
 		System.out.println(JSONSerializer.toJSON(stuFromJson));
 		
 		
