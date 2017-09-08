@@ -22,10 +22,14 @@ public class JSONObjcetDemo {
 
 			Student stu = new Student("line", 17, "110");
 			
+			// javaBean -> jsonObject
 			JSONObject jsonObj1 = (JSONObject)JSON.toJSON(stu);
+			// jsonObject -> jsonString
 			System.out.println(jsonObj1.toJSONString());
-			
-			Student stuFromJson = jsonObj1.toJavaObject(Student.class);
+			// jsonString -> jsonObject
+			JSONObject jsonObj = JSON.parseObject(jsonObj1.toJSONString());
+			// jsonObject -> javaBean
+			Student stuFromJson = jsonObj.toJavaObject(Student.class);
 			System.out.println(stuFromJson.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
