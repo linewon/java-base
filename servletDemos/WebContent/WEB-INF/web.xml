@@ -15,6 +15,13 @@
 		<servlet-name>ConcurrentDemo</servlet-name>
 		<servlet-class>line.servlet.firstdemo.ConcurrentDemo</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>FileDownloadDemo</display-name>
+		<servlet-name>FileDownloadDemo</servlet-name>
+		<servlet-class>line.servlet.file.FileDownloadDemo</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>ServletDemo</servlet-name>
@@ -23,6 +30,10 @@
 	<servlet-mapping>
 		<servlet-name>ConcurrentDemo</servlet-name>
 		<url-pattern>/ConcurrentDemo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FileDownloadDemo</servlet-name>
+		<url-pattern>/FileDownloadDemo</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>
