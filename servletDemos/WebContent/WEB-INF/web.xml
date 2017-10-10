@@ -22,6 +22,20 @@
 		<servlet-name>FileDownloadDemo</servlet-name>
 		<servlet-class>line.servlet.file.FileDownloadDemo</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>CacheDemo</display-name>
+		<servlet-name>CacheDemo</servlet-name>
+		<servlet-class>line.servlet.cache.CacheDemo</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>FileDown</display-name>
+		<servlet-name>FileDown</servlet-name>
+		<servlet-class>line.servlet.file.FileDown</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>ServletDemo</servlet-name>
@@ -34,6 +48,14 @@
 	<servlet-mapping>
 		<servlet-name>FileDownloadDemo</servlet-name>
 		<url-pattern>/FileDownloadDemo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CacheDemo</servlet-name>
+		<url-pattern>/CacheDemo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FileDown</servlet-name>
+		<url-pattern>/FileDown</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>
