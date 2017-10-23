@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
  * 看来只能传图片或者英文文本，其中如果包含中文的话，
  * 文件名和文件内容里面都会有乱码。
  * 在outputStream里设置一下编码格式应该就可以了
+ * 
+ * String.getBytes() 的过程一定会去查对应的码表！
  */
 public class FileDownloadDemo extends HttpServlet {
 	private static final long serialVersionUID = 11111L;
