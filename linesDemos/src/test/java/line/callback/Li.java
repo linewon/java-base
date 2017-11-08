@@ -11,7 +11,7 @@ public class Li {
 	public static final Li getInstance() {
 		return SingleHolder.INSTANCE;
 	}
-	
+	private static boolean lock = true;
 	public void textWang(CallBack callBack, String text) {
 		
 		try {
@@ -26,11 +26,16 @@ public class Li {
 	
 	@Override
 	public int hashCode() {
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		while (lock) {
+			lock = false;
+			try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			break;
 		}
+		lock = true;
 		return super.hashCode();
 	}
 }
