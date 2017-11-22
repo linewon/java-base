@@ -10,7 +10,6 @@ import java.util.Random;
 public class RunableDemo implements Runnable {
 	
 	private int tickets = 10;
-	private String threadName = null;
 	private Random random = new Random();
 
 	public void run() {

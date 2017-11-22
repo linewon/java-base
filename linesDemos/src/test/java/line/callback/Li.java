@@ -12,9 +12,16 @@ public class Li {
 		return SingleHolder.INSTANCE;
 	}
 	private static boolean lock = true;
-	public void textWang(CallBack callBack, String text) {
+	
+	/**
+	 * 机上synchronized互斥锁后，单例对象的这个方法，在同一时刻只能被同一个线程所执行
+	 * @param callBack
+	 * @param text
+	 */
+	public synchronized void textWang(CallBack callBack, String text) {
 		
 		try {
+			System.out.println("li was watching movie.");
 			// 看了一场电影。
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
