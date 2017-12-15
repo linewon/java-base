@@ -15,6 +15,8 @@ public class HttpClientDemo {
 	/**
 	 * http client demo
 	 * 
+	 * get xml string response and parse
+	 * 
 	 * author: linewon
 	 */
 	public static void main(String[] args) {
@@ -51,5 +53,4 @@ public class HttpClientDemo {
 		}
         return resultStr;
     }
-
 }
