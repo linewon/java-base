@@ -3,7 +3,7 @@ package line.generics;
 import lombok.Getter;
 import lombok.Setter;
 
-public class GenericsPair<K, V> {
+public class MyGenericPair<K, V> {
 
 	@Getter
 	@Setter

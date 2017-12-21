@@ -1,10 +1,10 @@
 package line.generics;
 
-public class Generics<T> {
+public class MyGeneric<T> {
 
 	private T obj;
 	
-	public Generics(T obj) {
+	public MyGeneric(T obj) {
 		this.obj = obj;
 	}
 	
@@ -15,7 +15,7 @@ public class Generics<T> {
 		return obj;
 	}
 	
-	public String objName() {
+	public String getTName() {
 		return obj.getClass().getName();
 	}
 }
